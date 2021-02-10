@@ -5,7 +5,6 @@ import MenuItem from '../menu-item/Menu-item';
 class Directory extends React.Component{
     constructor(){
         super();
-
         this.state = {
             sections:[
                 {
@@ -27,27 +26,25 @@ class Directory extends React.Component{
                     linkUrl: 'sneakers'
                 },
                 {
-                    title: 'womens',
+                    title: 'girly',
                     imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                     size: 'large',
                     id: 4,
-                    linkUrl: 'womens'
+                    linkUrl: 'girly'
                 },
                 {
-                    title: 'mens',
+                    title: 'manly',
                     imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                     size: 'large',
                     id: 5,
-                    linkUrl: 'mens'
+                    linkUrl: 'manly'
                 },
             ]
         }
     }
-
     render(){
         return(
             <div className='directory-menu'>
-            {/* aplicamos destructuring en las variables de la funcion que se aplica a cada item, para no repetir el nombre "section" */}
               {this.state.sections.map(({ id, ...otherSectionProps }) => (
                   <MenuItem key={id} {...otherSectionProps}/>
             ))}
