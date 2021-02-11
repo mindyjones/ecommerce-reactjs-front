@@ -1,6 +1,6 @@
 .menu-item {
   min-width: 30%;
-  height: 240px;
+  height: 340px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
     cursor:pointer;
 
     & .background-image{
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
@@ -23,7 +23,7 @@
   }
 
   &.large{
-    height:380px;
+    height:500px;
   }
 
   &:first-child {
