@@ -3,6 +3,9 @@ import './Directory.scss';
 import MenuItem from '../menu-item/Menu-item';
 
 class Directory extends React.Component{
+    // En ES7 ya podemos suprimir constructor(){} y como tal podemos quitar super()
+    // En ES7 además ya podemos declarar properties de la class sin el this.
+    // En ES7 si que aun es necesario el this para llamar a propiedades desde methods.
     constructor(){
         super();
         this.state = {
@@ -45,6 +48,7 @@ class Directory extends React.Component{
     render(){
         return(
             <div className='directory-menu'>
+{/* En ES7 si que aun es necesario el this para llamar a propiedades desde methods. */}
               {this.state.sections.map(({ id, ...otherSectionProps }) => (
                   <MenuItem key={id} {...otherSectionProps}/>
             ))}
